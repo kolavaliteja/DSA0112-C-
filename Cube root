@@ -1,0 +1,20 @@
+#include <iostream>
+#include <cmath> 
+using namespace std;
+
+int main() {
+    double number, result;
+
+    cout << "Enter a number: ";
+    cin >> number;
+
+    if (number == 0) {
+        cout << "The cube root of 0 is 0 ";
+    } 
+    else {
+        result = cbrt(number); 
+        cout << "The cube root of " << number << " is " << result ;
+    }
+
+    return 0;
+}
