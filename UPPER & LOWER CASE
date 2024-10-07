@@ -1,0 +1,70 @@
+#include<iostream>
+#include<cstring>
+using namespace std;
+
+int main()
+{
+    char arr[] = "TEJA sri";
+
+    cout << "Original String:"<< arr<< endl;
+    
+    cout<<"\nString in LOWERCASE : ";
+    for (int i=0;i<strlen(arr);i++){
+        putchar(tolower(arr[i]));
+}
+   cout<<"\nString in UPPERCASE : ";
+   for (int i=0;i<strlen(arr);i++){
+        putchar(toupper(arr[i]));
+}
+}
+
+
+/*#include <iostream>
+#include <string>
+#include <algorithm>
+
+class StringConverter {
+private:
+    std::string str;
+
+public:
+    StringConverter(const std::string& input) : str(input) {}
+
+    void toUpperCase() {
+        std::transform(str.begin(), str.end(), str.begin(), ::toupper);
+    }
+
+    void toLowerCase() {
+        std::transform(str.begin(), str.end(), str.begin(), ::tolower);
+    }
+    void display() const {
+        std::cout << "Converted string: " << str << std::endl;
+    }
+};
+
+int main() {
+    std::string input;
+    char choice;
+
+    std::cout << "Enter a string: ";
+    std::getline(std::cin, input);
+
+    StringConverter converter(input);
+
+    std::cout << "Enter 'U' for uppercase or 'L' for lowercase conversion: ";
+    std::cin >> choice;
+
+    if (choice == 'U' || choice == 'u') {
+        converter.toUpperCase();
+    } else if (choice == 'L' || choice == 'l') {
+        converter.toLowerCase();
+    } else {
+        std::cout << "Invalid choice!" << std::endl;
+        return 1;
+    }
+
+    converter.display();
+
+    return 0;
+}
+*/
