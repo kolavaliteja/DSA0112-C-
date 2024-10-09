@@ -1,0 +1,23 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	int a;
+	cout<<"enter the age:";
+	cin>>a;
+	if(a<=0)
+	{
+		cout<<"enter valid age";
+	}
+	else
+	{
+		if(a>=18)
+		{
+			cout<<"eligible to vote";
+		}
+		else
+		{
+			cout<<"aftre "<<18-a<<" year person is eligible for vote"; 
+		}
+	}
+}
