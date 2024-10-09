@@ -1,0 +1,39 @@
+#include<iostream>
+using namespace std;
+
+int main() {
+    int row = 3, col = 3;
+    int firstMatrix[3][3], secondMatrix[3][3], resultMatrix[3][3] = {0};
+
+    cout << "Enter the elements of the first matrix (3x3):\n";
+    for (int i = 0; i < row; i++) {
+        for (int j = 0; j < col; j++) {
+            cin >> firstMatrix[i][j];
+        }
+    }
+
+    cout << "Enter the elements of the second matrix (3x3):\n";
+    for (int i = 0; i < row; i++) {
+        for (int j = 0; j < col; j++) {
+            cin >> secondMatrix[i][j];
+        }
+    }
+
+    for (int i = 0; i < row; i++) {
+        for (int j = 0; j < col; j++) {
+            for (int k = 0; k < col; k++) {
+                resultMatrix[i][j] += firstMatrix[i][k] * secondMatrix[k][j];
+            }
+        }
+    }
+
+    cout << "Multiplication of the matrices:\n";
+    for (int i = 0; i < row; i++) {
+        for (int j = 0; j < col; j++) {
+            cout << resultMatrix[i][j] << " ";
+        }
+        cout << endl;
+    }
+
+    return 0;
+}
